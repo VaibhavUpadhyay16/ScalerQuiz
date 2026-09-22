@@ -1,4 +1,4 @@
-# 🤖 ScalarQuiz — AI-Powered Quiz & Code Analysis Platform
+# ScalarQuiz — AI-Powered Quiz & Code Analysis Platform
 
 ScalarQuiz is a full-stack **MERN** (MongoDB, Express, React, Node.js) web application that generates **AI-powered multiple-choice quizzes** on demand and lets users write and get AI feedback on code solutions to programming problems. It is a browser-based re-imagining of an original **Java Swing + Gemini AI desktop application**, rebuilt as a modern client-server web app.
 
@@ -188,8 +188,7 @@ npm start        # plain node
 
 The server prints a startup banner and connects to MongoDB automatically. Visiting `http://localhost:5000/` should return:
 
-```
-🤖 AI-Powered Quiz Application API is running securely
+``` AI-Powered Quiz Application API is running securely
 ```
 
 ### Frontend Setup
@@ -202,7 +201,7 @@ npm run dev       # starts Vite dev server on http://localhost:5173
 
 The Vite dev server proxies any request to `/api/*` to `http://localhost:5000` (see `vite.config.js`), so the two servers work together out of the box during local development.
 
-> ⚠️ **Note:** `frontend/src/api/api.js` currently hardcodes `BASE_URL` to a deployed backend (`https://scalarquiz.onrender.com/api`) rather than reading from an environment variable. For local development against your own backend, either change `BASE_URL` to `http://localhost:5000/api` or rely on the Vite proxy by changing it to a relative path (`/api`).
+>  **Note:** `frontend/src/api/api.js` currently hardcodes `BASE_URL` to a deployed backend (`https://scalarquiz.onrender.com/api`) rather than reading from an environment variable. For local development against your own backend, either change `BASE_URL` to `http://localhost:5000/api` or rely on the Vite proxy by changing it to a relative path (`/api`).
 
 Once both servers are running, open **http://localhost:5173** in your browser.
 
@@ -225,7 +224,7 @@ Configured in `backend/.env` (see `backend/.env.example`):
 | `COOKIE_SECRET`        | Reserved for cookie signing                                              | *(change in production)*                           |
 | `DUMMY_API_KEY`        | Placeholder for future integrations                                      | —                                                   |
 
-> 🔐 Never commit a real `.env` file — it's already excluded via `backend/.gitignore`.
+>  Never commit a real `.env` file — it's already excluded via `backend/.gitignore`.
 
 ---
 
@@ -260,9 +259,9 @@ All endpoints are prefixed with `/api`. Endpoints marked 🔒 require a valid `A
 | POST   | `/login`         | Public | Log in with `email` + `password`                     |
 | POST   | `/logout`        | Public | Clears the refresh-token cookie and revokes it server-side |
 | POST   | `/refresh`       | Public (cookie) | Rotates and returns a new access token         |
-| GET    | `/me`            | 🔒     | Returns the currently authenticated user's profile   |
+| GET    | `/me`            |      | Returns the currently authenticated user's profile   |
 
-### Users — `/api/users` (all routes 🔒)
+### Users — `/api/users` (all routes)
 
 | Method | Endpoint                        | Description                                      |
 |--------|----------------------------------|---------------------------------------------------|
